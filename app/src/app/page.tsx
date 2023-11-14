@@ -2,10 +2,7 @@
 
 import React from "react";
 import HomePage from "./home/page";
-import {
-  QueryClient,
-  QueryClientProvider,
-} from "react-query";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 const queryClient = new QueryClient();
 
