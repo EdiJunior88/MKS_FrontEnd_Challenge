@@ -1,4 +1,5 @@
 import { FaShoppingCart } from "react-icons/fa";
+import { InterfaceCardHeader } from "../../interface/interface";
 
 const CartHeader = ({
   cartItems,
@@ -7,7 +8,7 @@ const CartHeader = ({
   removeFromCart,
   updateQuantity,
   clearCart,
-}) => {
+}: InterfaceCardHeader) => {
   return (
     <div style={{ position: "relative" }}>
       {/* Ícone de carrinho */}
@@ -57,10 +58,7 @@ const CartHeader = ({
                 </button>
                 <button
                   onClick={() =>
-                    updateQuantity(
-                      index,
-                      item.quantity > 1 ? item.quantity - 1 : 1
-                    )
+                    updateQuantity(index, Math.max(item.quantity - 1, 1))
                   }>
                   -1
                 </button>
