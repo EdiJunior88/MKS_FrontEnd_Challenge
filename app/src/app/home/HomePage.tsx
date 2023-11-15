@@ -1,18 +1,28 @@
 "use client";
 
-// Importe os módulos necessários
 import Image from "next/image";
 import { useQuery } from "react-query";
-import apiProducts from "@/app/api/api";
+import apiProducts from "@/app/api/apiProducts";
 import { useState } from "react";
-import CartHeader from "../components/cart/CartHeader";
-import { InterfaceApi } from "../interface/interface";
+import ShoppingCart from "@/app/components/ShoppingCart/ShoppingCart";
+import { InterfaceApi } from "@/app/interface/interface";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import {
+  Container,
+  ContainerHeader,
+  TitleHeader,
+  SubStyle,
+} from "@/app/home/HomePageStyles";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+});
 
 export default function HomePage() {
   const [cartItems, setCartItems] = useState<InterfaceApi[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
-
-  const message = "test";
 
   // Função para adicionar itens ao carrinho
   const addToCart = (item: InterfaceApi) => {
@@ -46,7 +56,8 @@ export default function HomePage() {
   // Função para limpar todo o carrinho
   const clearCart = () => {
     setCartItems([]);
-    setIsCartOpen(false); // Feche a janela do carrinho após limpar
+    // Feche a janela do carrinho após limpar
+    setIsCartOpen(false);
   };
 
   const toggleCart = () => {
@@ -60,44 +71,59 @@ export default function HomePage() {
     isLoading,
   } = useQuery("productsData", apiProducts);
 
-  // Verifique se está carregando os dados
-  if (isLoading) return <div>Loading...</div>;
-
   // Verifique se ocorreu algum erro
   if (error) return <div>Aconteceu um erro, tente novamente mais tarde!</div>;
 
   return (
-    <div>
-      {/* Componente carrinho de compras */}
-      <CartHeader
-        cartItems={cartItems}
-        toggleCart={toggleCart}
-        isCartOpen={isCartOpen}
-        removeFromCart={removeFromCart}
-        updateQuantity={updateQuantity}
-        clearCart={clearCart}
-      />
+    <Container>
+      <ContainerHeader className={montserrat.className}>
+        <TitleHeader>
+          MKS
+          <SubStyle>Sistemas</SubStyle>
+        </TitleHeader>
 
-      {/* Renderize a lista de produtos */}
+        {/* Componente carrinho de compras */}
+        <ShoppingCart
+          cartItems={cartItems}
+          toggleCart={toggleCart}
+          isCartOpen={isCartOpen}
+          removeFromCart={removeFromCart}
+          updateQuantity={updateQuantity}
+          clearCart={clearCart}
+        />
+      </ContainerHeader>
+
       <ul>
-        {products.map((product: InterfaceApi) => (
-          <li key={product.id}>
-            <h2>{product.name}</h2>
-            <p>{product.description}</p>
-            <p>Preço: R${product.price}</p>
-            <Image
-              src={product.photo}
-              width={50}
-              height={50}
-              alt='Picture of the author'
-              priority={true}
-            />
-            <button onClick={() => addToCart(product)}>
-              Adicionar ao carrinho
-            </button>
-          </li>
-        ))}
+        {isLoading
+          ? // Renderizar o esqueleto enquanto os dados estão sendo carregados
+            Array.from({ length: 8 }).map((_, index) => (
+              <li key={index}>
+                <Skeleton height={50} width={50} />
+                <Skeleton height={20} width={200} />
+                <Skeleton height={20} width={150} />
+                <Skeleton height={20} width={100} />
+                <Skeleton height={20} width={100} />
+                <Skeleton height={50} width={50} />
+                <Skeleton height={30} width={100} />
+              </li>
+            ))
+          : // Renderize a lista de produtos
+            products.map((product: InterfaceApi) => (
+              <li key={product.id}>
+                <h2>{product.name}</h2>
+                <p>{product.description}</p>
+                <p>Preço: R${product.price}</p>
+                <Image
+                  src={product.photo}
+                  width={50}
+                  height={50}
+                  alt='Picture of the author'
+                  priority={true}
+                />
+                <button onClick={() => addToCart(product)}>Comprar</button>
+              </li>
+            ))}
       </ul>
-    </div>
+    </Container>
   );
 }

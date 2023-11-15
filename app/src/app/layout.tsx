@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Favicon from '/public/favicon.ico';
+import Favicon from "/public/favicon.ico";
+import "@/app/css/reset.css";
+import StyledComponentsRegistry from "@/app/registry";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,8 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='pt-br'>
-      <body className={inter.className}>{children}</body>
+    <html>
+      <body>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      </body>
     </html>
   );
 }
