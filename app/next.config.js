@@ -5,6 +5,6 @@ const nextConfig = {};
 
 module.exports = {
   images: {
-    domains: ['mks-sistemas.nyc3.digitaloceanspaces.com'],
+    domains: ['mks-sistemas.nyc3.digitaloceanspaces.com', 'i.ibb.co'],
   },
 };
