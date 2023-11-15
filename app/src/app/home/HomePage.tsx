@@ -108,13 +108,13 @@ export default function HomePage() {
           ? // Renderizar o esqueleto enquanto os dados estão sendo carregados
             Array.from({ length: 8 }).map((_, index) => (
               <li key={index}>
-                <Skeleton height={53} width={218} />
-                <Skeleton height={53} width={218} />
-                <Skeleton height={53} width={218} />
-                <Skeleton height={53} width={218} />
-                <Skeleton height={53} width={218} />
-                <Skeleton height={53} width={218} />
-                <Skeleton height={53} width={218} />
+                <Skeleton height={49} width={218} />
+                <Skeleton height={49} width={218} />
+                <Skeleton height={49} width={218} />
+                <Skeleton height={49} width={218} />
+                <Skeleton height={49} width={218} />
+                <Skeleton height={49} width={218} />
+                <Skeleton height={49} width={218} />
               </li>
             ))
           : // Renderize a lista de produtos
@@ -127,7 +127,7 @@ export default function HomePage() {
                     height={0}
                     sizes='100vw'
                     style={{ width: "auto", height: "138px" }}
-                    alt='Picture of the author'
+                    alt='Products'
                     priority={true}
                   />
                   <CardDescription>

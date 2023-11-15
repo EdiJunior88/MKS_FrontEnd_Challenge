@@ -1,12 +1,26 @@
+import Image from "next/image";
 import { TiShoppingCart } from "react-icons/ti";
 import { InterfaceCardHeader } from "@/app/interface/interface";
 import {
   Container,
   ContainerShoppingCart,
   ShoppingCartOpen,
+  ContainerShoppingCartHeader,
+  ShoppingCartName,
   ContainerButton,
   ButtonClose,
   Button,
+  ContainerCardItens,
+  ButtonCloseProduct,
+  CardItens,
+  ContainerButtonQuantity,
+  NameProduct,
+  Quantity,
+  ButtonQuantity,
+  ButtonQuantityRight,
+  ButtonQuantityLeft,
+  ItemQuantity,
+  Price,
 } from "@/app/components/ShoppingCart/ShoppingCartStyles";
 
 export default function ShoppingCart({
@@ -29,7 +43,7 @@ export default function ShoppingCart({
     <Container>
       <ContainerShoppingCart onClick={toggleCart}>
         {/* Ícone de carrinho */}
-        <TiShoppingCart size={20}  />
+        <TiShoppingCart size={20} />
 
         {/* Número de itens no carrinho */}
         <div>{cartItems.reduce((total, item) => total + item.quantity, 0)}</div>
@@ -38,28 +52,57 @@ export default function ShoppingCart({
       {/* Janela do carrinho */}
       {isCartOpen && (
         <ShoppingCartOpen>
+          <ContainerShoppingCartHeader>
+            <ShoppingCartName>Carrinho<br /> de Compras</ShoppingCartName>
+            <ButtonClose onClick={toggleCart}>X</ButtonClose>
+          </ContainerShoppingCartHeader>
+
           {/* Os itens do carrinho são renderizados aqui */}
-          <ul>
-            <ContainerButton>
-              <ButtonClose onClick={toggleCart}>X</ButtonClose>
-              {cartItems.map((item, index) => (
-                <li key={index}>
-                  {item.name} - R${item.price} - Quantidade: {item.quantity}
-                  <button onClick={() => removeFromCart(index)}>Remover</button>
-                  <button
-                    onClick={() => updateQuantity(index, item.quantity + 1)}>
-                    +1
-                  </button>
-                  <button
-                    onClick={() =>
-                      updateQuantity(index, Math.max(item.quantity - 1, 1))
-                    }>
-                    -1
-                  </button>
-                </li>
-              ))}
-            </ContainerButton>
-          </ul>
+          <ContainerButton>
+            {cartItems.map((item, index) => (
+              <ContainerCardItens key={index}>
+                <ButtonCloseProduct onClick={() => removeFromCart(index)}>
+                  x
+                </ButtonCloseProduct>
+                <CardItens>
+                  <Image
+                    src={item.photo}
+                    width={0}
+                    height={0}
+                    sizes='100vw'
+                    style={{ width: "auto", height: "57px" }}
+                    alt='Products'
+                    priority={true}
+                  />
+                  <NameProduct>{item.name}</NameProduct>
+
+                  <ContainerButtonQuantity>
+                    <Quantity>Qtd</Quantity>
+
+                    <ButtonQuantity>
+                      <ButtonQuantityRight
+                        onClick={() =>
+                          updateQuantity(index, Math.max(item.quantity - 1, 1))
+                        }>
+                        -
+                      </ButtonQuantityRight>
+
+                      <ItemQuantity>{item.quantity}</ItemQuantity>
+
+                      <ButtonQuantityLeft
+                        onClick={() =>
+                          updateQuantity(index, item.quantity + 1)
+                        }>
+                        +
+                      </ButtonQuantityLeft>
+                    </ButtonQuantity>
+                  </ContainerButtonQuantity>
+
+                  <Price>R${item.price}</Price>
+                </CardItens>
+              </ContainerCardItens>
+            ))}
+          </ContainerButton>
 
           <div>
             <div>Total: R${calculateTotal().toFixed(2)}</div>

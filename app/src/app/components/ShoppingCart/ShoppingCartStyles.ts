@@ -34,17 +34,33 @@ export const ShoppingCartOpen = styled.div`
   height: 100%;
   top: 0;
   right: 0;
+  padding-top: 40px;
   background: #0f52ba;
   border: none;
   box-shadow: -5px 0 5px 0 rgba(0, 0, 0, 0.11);
   z-index: 1;
 `;
 
-export const ContainerButton = styled.div`
+export const ContainerShoppingCartHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 0 52px 52px 52px;
+`;
+
+export const ShoppingCartName = styled.p`
+  width: 180px;
+  font-size: 27px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 40px;
+`;
+
+export const ContainerButton = styled.ul`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
   height: 100%;
+  gap: 28px;
 `;
 
 export const Button = styled.button`
@@ -59,11 +75,91 @@ export const Button = styled.button`
 `;
 
 export const ButtonClose = styled.button`
+  position: relative;
   width: 38px;
   height: 38px;
+  right: -20px;
+  font-size: 15px;
   color: #fff;
   background: #000;
   border-radius: 50%;
   border: none;
   cursor: pointer;
+`;
+
+export const ContainerCardItens = styled.li`
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: #fff;
+  border-radius: 8px;
+  width: 354px;
+  padding: 23px 23px 23px 0;
+`;
+
+export const ButtonCloseProduct = styled.button`
+  position: relative;
+  width: 18px;
+  height: 18px;
+  top: -71px;
+  right: -366px;
+  color: #fff;
+  background: #000;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+`;
+
+export const CardItens = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+`;
+
+export const ContainerButtonQuantity = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const NameProduct = styled.span`
+  font-size: 13px;
+`;
+
+export const Quantity = styled.span`
+  font-size: 8px;
+  padding-bottom: 8px;
+`;
+
+export const ButtonQuantity = styled.div`
+  display: flex;
+  align-items: center;
+  height: 19px;
+  padding: 5px 0;
+  border: 1px solid #bfbfbf;
+  border-radius: 4px;
+`;
+
+export const ButtonQuantityRight = styled.button`
+  border: 1px solid;
+  border-color: transparent #bfbfbf transparent transparent;
+  background: none;
+  cursor: pointer;
+`;
+export const ButtonQuantityLeft = styled.button`
+  border: 1px solid;
+  border-color: transparent transparent transparent #bfbfbf;
+  background: none;
+  cursor: pointer;
+`;
+
+export const ItemQuantity = styled.span`
+  font-size: 14px;
+  padding: 0 10px;
+`;
+
+export const Price = styled.span`
+  font-size: 14px;
+  font-weight: bold;
 `;
