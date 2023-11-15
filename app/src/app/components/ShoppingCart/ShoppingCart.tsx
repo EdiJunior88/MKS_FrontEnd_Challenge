@@ -1,4 +1,4 @@
-import { FaShoppingCart } from "react-icons/fa";
+import { TiShoppingCart } from "react-icons/ti";
 import { InterfaceCardHeader } from "@/app/interface/interface";
 import {
   Container,
@@ -27,9 +27,9 @@ export default function ShoppingCart({
 
   return (
     <Container>
-      <ContainerShoppingCart>
+      <ContainerShoppingCart onClick={toggleCart}>
         {/* Ícone de carrinho */}
-        <FaShoppingCart size={20} onClick={toggleCart} />
+        <TiShoppingCart size={20}  />
 
         {/* Número de itens no carrinho */}
         <div>{cartItems.reduce((total, item) => total + item.quantity, 0)}</div>
@@ -41,7 +41,7 @@ export default function ShoppingCart({
           {/* Os itens do carrinho são renderizados aqui */}
           <ul>
             <ContainerButton>
-              <ButtonClose onClick={clearCart}>X</ButtonClose>
+              <ButtonClose onClick={toggleCart}>X</ButtonClose>
               {cartItems.map((item, index) => (
                 <li key={index}>
                   {item.name} - R${item.price} - Quantidade: {item.quantity}

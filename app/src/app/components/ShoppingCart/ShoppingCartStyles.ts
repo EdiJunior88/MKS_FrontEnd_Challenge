@@ -12,15 +12,17 @@ export const Container = styled.div`
 
 export const ContainerShoppingCart = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 56px;
   height: 45px;
   padding: 0 18px;
   border-radius: 10px;
+  font-weight: bold;
   cursor: pointer;
   background: #fff;
   z-index: 0;
+  gap: 10px;
 `;
 
 export const ShoppingCartOpen = styled.div`

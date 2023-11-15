@@ -65,10 +65,11 @@ export default function HomePage() {
   // Função para limpar todo o carrinho
   const clearCart = () => {
     setCartItems([]);
-    // Feche a janela do carrinho após limpar
+    // Fechar a janela do carrinho após limpar
     setIsCartOpen(false);
   };
 
+  // Abrir ou fechar a janela do carrinho
   const toggleCart = () => {
     setIsCartOpen(!isCartOpen);
   };
