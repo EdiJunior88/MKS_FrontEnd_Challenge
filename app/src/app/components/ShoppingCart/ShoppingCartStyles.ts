@@ -53,13 +53,15 @@ export const Button = styled.button`
   font-weight: bold;
   background: #000;
   border: none;
+  cursor: pointer;
 `;
 
-export const ButtonX = styled.button`
+export const ButtonClose = styled.button`
   width: 38px;
   height: 38px;
   color: #fff;
   background: #000;
   border-radius: 50%;
   border: none;
+  cursor: pointer;
 `;

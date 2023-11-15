@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { Montserrat } from "next/font/google";
 import { useQuery } from "react-query";
-import apiProducts from "@/app/api/apiProducts";
 import { useState } from "react";
+import apiProducts from "@/app/api/apiProducts";
 import ShoppingCart from "@/app/components/ShoppingCart/ShoppingCart";
 import { InterfaceApi } from "@/app/interface/interface";
 import Skeleton from "react-loading-skeleton";
@@ -13,8 +14,16 @@ import {
   ContainerHeader,
   TitleHeader,
   SubStyle,
+  ContainerCard,
+  ContainerCardDescription,
+  Card,
+  CardDescription,
+  NameProduct,
+  Price,
+  Description,
+  ButtonCard,
 } from "@/app/home/HomePageStyles";
-import { Montserrat } from "next/font/google";
+import { RiShoppingBag3Line } from "react-icons/ri";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -75,8 +84,8 @@ export default function HomePage() {
   if (error) return <div>Aconteceu um erro, tente novamente mais tarde!</div>;
 
   return (
-    <Container>
-      <ContainerHeader className={montserrat.className}>
+    <Container className={montserrat.className}>
+      <ContainerHeader>
         <TitleHeader>
           MKS
           <SubStyle>Sistemas</SubStyle>
@@ -93,37 +102,47 @@ export default function HomePage() {
         />
       </ContainerHeader>
 
-      <ul>
+      <ContainerCard>
         {isLoading
           ? // Renderizar o esqueleto enquanto os dados estão sendo carregados
             Array.from({ length: 8 }).map((_, index) => (
               <li key={index}>
-                <Skeleton height={50} width={50} />
-                <Skeleton height={20} width={200} />
-                <Skeleton height={20} width={150} />
-                <Skeleton height={20} width={100} />
-                <Skeleton height={20} width={100} />
-                <Skeleton height={50} width={50} />
-                <Skeleton height={30} width={100} />
+                <Skeleton height={53} width={218} />
+                <Skeleton height={53} width={218} />
+                <Skeleton height={53} width={218} />
+                <Skeleton height={53} width={218} />
+                <Skeleton height={53} width={218} />
+                <Skeleton height={53} width={218} />
+                <Skeleton height={53} width={218} />
               </li>
             ))
           : // Renderize a lista de produtos
             products.map((product: InterfaceApi) => (
-              <li key={product.id}>
-                <h2>{product.name}</h2>
-                <p>{product.description}</p>
-                <p>Preço: R${product.price}</p>
-                <Image
-                  src={product.photo}
-                  width={50}
-                  height={50}
-                  alt='Picture of the author'
-                  priority={true}
-                />
-                <button onClick={() => addToCart(product)}>Comprar</button>
-              </li>
+              <Card key={product.id}>
+                <ContainerCardDescription>
+                  <Image
+                    src={product.photo}
+                    width={0}
+                    height={0}
+                    sizes='100vw'
+                    style={{ width: "auto", height: "138px" }}
+                    alt='Picture of the author'
+                    priority={true}
+                  />
+                  <CardDescription>
+                    <NameProduct>{product.name}</NameProduct>
+                    <Price>R${product.price}</Price>
+                  </CardDescription>
+                  <Description>{product.description}</Description>
+                </ContainerCardDescription>
+
+                <ButtonCard onClick={() => addToCart(product)}>
+                  <RiShoppingBag3Line />
+                  Comprar
+                </ButtonCard>
+              </Card>
             ))}
-      </ul>
+      </ContainerCard>
     </Container>
   );
 }

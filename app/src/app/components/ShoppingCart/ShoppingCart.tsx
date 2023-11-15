@@ -5,7 +5,7 @@ import {
   ContainerShoppingCart,
   ShoppingCartOpen,
   ContainerButton,
-  ButtonX,
+  ButtonClose,
   Button,
 } from "@/app/components/ShoppingCart/ShoppingCartStyles";
 
@@ -41,7 +41,7 @@ export default function ShoppingCart({
           {/* Os itens do carrinho são renderizados aqui */}
           <ul>
             <ContainerButton>
-              <ButtonX onClick={clearCart}>X</ButtonX>
+              <ButtonClose onClick={clearCart}>X</ButtonClose>
               {cartItems.map((item, index) => (
                 <li key={index}>
                   {item.name} - R${item.price} - Quantidade: {item.quantity}
@@ -63,7 +63,7 @@ export default function ShoppingCart({
 
           <div>
             <div>Total: R${calculateTotal().toFixed(2)}</div>
-            <Button>Finalizar Compra</Button>
+            <Button onClick={clearCart}>Finalizar Compra</Button>
           </div>
         </ShoppingCartOpen>
       )}
