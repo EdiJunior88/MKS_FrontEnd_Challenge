@@ -23,6 +23,7 @@ import {
   Description,
   ButtonCard,
 } from "@/app/home/HomePageStyles";
+import Footer from "@/app/components/Footer/Footer";
 import { RiShoppingBag3Line } from "react-icons/ri";
 
 const montserrat = Montserrat({
@@ -144,6 +145,7 @@ export default function HomePage() {
               </Card>
             ))}
       </ContainerCard>
+      <Footer />
     </Container>
   );
 }

@@ -7,7 +7,7 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  background: #e5e5e5;
+  background: #f1f1f1;
 `;
 
 export const ContainerHeader = styled.header`
