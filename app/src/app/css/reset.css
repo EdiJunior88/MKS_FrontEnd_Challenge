@@ -3,6 +3,27 @@
    License: none (public domain)
 */
 
+* {
+  /* Scrollbar personalizada no Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #0f52ba;
+
+  /* Scrollbar personalizada no Chrome, Edge e Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #e5e5e5;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #0f52ba;
+    border-radius: 20px;
+    border: 3px solid #0f52ba;
+  }
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,

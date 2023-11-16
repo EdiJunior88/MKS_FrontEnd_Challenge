@@ -34,7 +34,6 @@ export const ShoppingCartOpen = styled.div`
   height: 100%;
   top: 0;
   right: 0;
-  padding-top: 40px;
   background: #0f52ba;
   border: none;
   box-shadow: -5px 0 5px 0 rgba(0, 0, 0, 0.11);
@@ -44,7 +43,7 @@ export const ShoppingCartOpen = styled.div`
 export const ContainerShoppingCartHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0 52px 52px 52px;
+  padding: 30px 52px;
 `;
 
 export const ShoppingCartName = styled.p`
@@ -53,6 +52,32 @@ export const ShoppingCartName = styled.p`
   font-weight: bold;
   color: #fff;
   line-height: 40px;
+`;
+
+export const ScrollableContainer = styled.div`
+  padding-top: 10px;
+  max-height: 600px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  
+  /* Scrollbar personalizada no Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #000;
+
+  /* Scrollbar personalizada no Chrome, Edge e Safari */
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 20px;
+    border: 3px solid #000;
+  }
 `;
 
 export const ContainerButton = styled.ul`
@@ -161,5 +186,17 @@ export const ItemQuantity = styled.span`
 
 export const Price = styled.span`
   font-size: 14px;
+  font-weight: bold;
+`;
+
+export const ContainerTotalPurchase = styled.span`
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 52px;
+`;
+
+export const TotalPurchase = styled.span`
+  color: #fff;
+  font-size: 28px;
   font-weight: bold;
 `;
