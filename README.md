@@ -36,9 +36,9 @@ API: [API REST de produtos](https://mks-frontend-challenge-04811e8151e6.herokuap
 <p><s>5. Framer-motion</s> ❌ (utilização de animações do próprio CSS)</p>
 <p><s>6. Jest</s> ❌ (estudando testes, ainda não tenho conhecimentos para aplicar em um projeto)</p>
 
-<strong>Link do projeto: </strong><a href="https://mks-front-end-challenge-edijunior88.vercel.app/">https://mks-front-end-challenge-edijunior88.vercel.app/</a>
+<hr>
 
-<br>
+<strong>Link do projeto: </strong><a href="https://mks-front-end-challenge-edijunior88.vercel.app/">https://mks-front-end-challenge-edijunior88.vercel.app/</a>
 
 <strong>Fork do projeto: </strong><a href="https://github.com/MKS-desenvolvimento-de-sistemas/mks-frontend-challenge">https://github.com/MKS-desenvolvimento-de-sistemas/mks-frontend-challenge</a>
 
