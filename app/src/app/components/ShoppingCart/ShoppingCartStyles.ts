@@ -1,8 +1,5 @@
-// ShoppingCartStyles.ts
-
 "use client";
-
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -25,6 +22,17 @@ export const ContainerShoppingCart = styled.div`
   gap: 10px;
 `;
 
+const fadeIn = keyframes`
+  0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+`;
+
 export const ShoppingCartOpen = styled.div`
   display: flex;
   flex-direction: column;
@@ -38,12 +46,17 @@ export const ShoppingCartOpen = styled.div`
   border: none;
   box-shadow: -5px 0 5px 0 rgba(0, 0, 0, 0.11);
   z-index: 1;
+  animation: ${fadeIn} 0.5s ease 0s 1 normal forwards;
 `;
 
 export const ContainerShoppingCartHeader = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 30px 52px;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const ShoppingCartName = styled.p`
@@ -56,10 +69,10 @@ export const ShoppingCartName = styled.p`
 
 export const ScrollableContainer = styled.div`
   padding-top: 10px;
-  max-height: 600px;
+  height: 250%;
   overflow-y: auto;
   scroll-behavior: smooth;
-  
+
   /* Scrollbar personalizada no Firefox */
   scrollbar-width: thin;
   scrollbar-color: #000;
@@ -189,13 +202,20 @@ export const Price = styled.span`
   font-weight: bold;
 `;
 
-export const ContainerTotalPurchase = styled.span`
+export const ContainerTotal = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+`;
+
+export const ContainerTotalPurchase = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 30px 52px;
 `;
 
-export const TotalPurchase = styled.span`
+export const TotalPurchase = styled.p`
   color: #fff;
   font-size: 28px;
   font-weight: bold;

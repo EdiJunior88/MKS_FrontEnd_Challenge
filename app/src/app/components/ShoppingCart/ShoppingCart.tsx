@@ -22,6 +22,7 @@ import {
   ButtonQuantityLeft,
   ItemQuantity,
   Price,
+  ContainerTotal,
   ContainerTotalPurchase,
   TotalPurchase,
 } from "@/app/components/ShoppingCart/ShoppingCartStyles";
@@ -55,17 +56,17 @@ export default function ShoppingCart({
       {/* Janela do carrinho */}
       {isCartOpen && (
         <ShoppingCartOpen>
-          <>
-            <ContainerShoppingCartHeader>
-              <ShoppingCartName>
-                Carrinho
-                <br /> de Compras
-              </ShoppingCartName>
-              <ButtonClose onClick={toggleCart}>X</ButtonClose>
-            </ContainerShoppingCartHeader>
+          <ContainerShoppingCartHeader>
+            <ShoppingCartName>
+              Carrinho
+              <br /> de Compras
+            </ShoppingCartName>
+            <ButtonClose onClick={toggleCart}>
+              X
+            </ButtonClose>
+          </ContainerShoppingCartHeader>
 
-    
-            <ScrollableContainer>
+          <ScrollableContainer>
             {/* Os itens do carrinho são renderizados aqui */}
             <ContainerButton>
               {cartItems.map((item, index) => (
@@ -110,10 +111,12 @@ export default function ShoppingCart({
                 </ContainerCardItens>
               ))}
             </ContainerButton>
-            </ScrollableContainer>
+          </ScrollableContainer>
 
+          <ContainerTotal>
             <ContainerTotalPurchase>
               <TotalPurchase>Total:</TotalPurchase>
+
               <TotalPurchase>
                 {/* Formata o valor para a moeda brasileira (Real) */}
                 {calculateTotal().toLocaleString("pt-BR", {
@@ -122,8 +125,9 @@ export default function ShoppingCart({
                 })}
               </TotalPurchase>
             </ContainerTotalPurchase>
+
             <Button onClick={clearCart}>Finalizar Compra</Button>
-          </>
+          </ContainerTotal>
         </ShoppingCartOpen>
       )}
     </Container>
