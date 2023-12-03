@@ -4,8 +4,6 @@ import Favicon from "/public/favicon.ico";
 import "@/app/css/reset.css";
 import StyledComponentsRegistry from "@/app/registry";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: "MKS Sistemas",
   description: "Gerado e criado por next app",
@@ -18,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html lang="pt-br">
       <body>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
