@@ -129,7 +129,7 @@ export default function HomePage() {
                     sizes="100vw"
                     style={{ width: "auto", height: "138px" }}
                     alt="Products"
-                    />
+                  />
                   <CardDescription>
                     <NameProduct>{product.name}</NameProduct>
                     <Price>R${product.price}</Price>
