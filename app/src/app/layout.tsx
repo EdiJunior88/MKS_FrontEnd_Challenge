@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Favicon from "/public/favicon.ico";
 import "@/app/css/reset.css";
 import StyledComponentsRegistry from "@/app/registry";
