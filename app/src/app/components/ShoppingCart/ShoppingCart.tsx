@@ -39,7 +39,7 @@ export default function ShoppingCart({
   const calculateTotal = () => {
     return cartItems.reduce(
       (total, item) => total + item.price * item.quantity,
-      0
+      0,
     );
   };
 
@@ -61,9 +61,7 @@ export default function ShoppingCart({
               Carrinho
               <br /> de Compras
             </ShoppingCartName>
-            <ButtonClose onClick={toggleCart}>
-              X
-            </ButtonClose>
+            <ButtonClose onClick={toggleCart}>X</ButtonClose>
           </ContainerShoppingCartHeader>
 
           <ScrollableContainer>
@@ -79,9 +77,9 @@ export default function ShoppingCart({
                       src={item.photo}
                       width={0}
                       height={0}
-                      sizes='100vw'
+                      sizes="100vw"
                       style={{ width: "auto", height: "57px" }}
-                      alt='Products'
+                      alt="Products"
                       priority={true}
                     />
                     <NameProduct>{item.name}</NameProduct>
@@ -92,16 +90,18 @@ export default function ShoppingCart({
                           onClick={() =>
                             updateQuantity(
                               index,
-                              Math.max(item.quantity - 1, 1)
+                              Math.max(item.quantity - 1, 1),
                             )
-                          }>
+                          }
+                        >
                           -
                         </ButtonQuantityRight>
                         <ItemQuantity>{item.quantity}</ItemQuantity>
                         <ButtonQuantityLeft
                           onClick={() =>
                             updateQuantity(index, item.quantity + 1)
-                          }>
+                          }
+                        >
                           +
                         </ButtonQuantityLeft>
                       </ButtonQuantity>

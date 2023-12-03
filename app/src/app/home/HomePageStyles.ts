@@ -108,9 +108,9 @@ export const Price = styled.button`
   height: 26px;
   font-size: 15px;
   font-weight: bold;
-  `;
+`;
 
-  export const Description = styled.span`
+export const Description = styled.span`
   display: flex;
-    font-size: 10px;
-  `;
+  font-size: 10px;
+`;

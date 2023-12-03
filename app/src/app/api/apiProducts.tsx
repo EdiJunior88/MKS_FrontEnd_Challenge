@@ -8,7 +8,7 @@ const apiProducts = async () => {
   //   "https://api.mockfly.dev/mocks/70416911-3717-46d7-a5d8-751d6613e8bb/products"
   // );
   const response = await axios.get(
-    "https://run.mocky.io/v3/b2b02e97-8975-4b30-94ca-6d00bd9da2b4/products"
+    "https://run.mocky.io/v3/b2b02e97-8975-4b30-94ca-6d00bd9da2b4/products",
   );
   return response.data.products;
 };
