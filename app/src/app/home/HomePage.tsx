@@ -37,7 +37,7 @@ export default function HomePage() {
   // Função para adicionar itens ao carrinho
   const addToCart = (item: InterfaceApi) => {
     const existingItemIndex = cartItems.findIndex(
-      (cartItem) => cartItem.id === item.id
+      (cartItem) => cartItem.id === item.id,
     );
 
     if (existingItemIndex !== -1) {
@@ -126,9 +126,9 @@ export default function HomePage() {
                     src={product.photo}
                     width={0}
                     height={0}
-                    sizes='100vw'
+                    sizes="100vw"
                     style={{ width: "auto", height: "138px" }}
-                    alt='Products'
+                    alt="Products"
                   />
                   <CardDescription>
                     <NameProduct>{product.name}</NameProduct>
