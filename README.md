@@ -53,8 +53,8 @@ API: [API REST de produtos](https://mks-frontend-challenge-04811e8151e6.herokuap
 <h3>Tempo gasto no projeto</h3>
 
 <p>
- <a href="https://wakatime.com/badge/github/EdiJunior88/mks-frontend-challenge">
-  <img src="https://wakatime.com/badge/github/EdiJunior88/mks-frontend-challenge.svg" alt="wakatime">
+ <a href="https://wakatime.com/badge/user/e7b8ca2e-291c-4eca-846b-95eced7beff1/project/018bc3b3-d1a9-4ae6-be7a-b0d16a431e07">
+  <img src="https://wakatime.com/badge/user/e7b8ca2e-291c-4eca-846b-95eced7beff1/project/018bc3b3-d1a9-4ae6-be7a-b0d16a431e07.svg" alt="wakatime">
  </a>
 </p>
 
