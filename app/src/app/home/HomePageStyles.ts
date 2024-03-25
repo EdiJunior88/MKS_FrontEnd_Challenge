@@ -114,3 +114,14 @@ export const Description = styled.span`
   display: flex;
   font-size: 10px;
 `;
+
+export const ErrorText = styled.p`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+  width: 100%;
+  height: 400px;
+`;

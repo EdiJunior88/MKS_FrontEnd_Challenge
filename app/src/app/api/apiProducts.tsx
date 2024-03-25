@@ -2,7 +2,7 @@ import axios from "axios";
 
 const apiProducts = async () => {
   const response = await axios.get(
-    "https://private-e759e-apimksfrontend.apiary-mock.com/products",
+    "https://private-e759e-apimksfrontend.apiary-mock.com/products"
   );
   // const response = await axios.get(
   //   "https://mks-frontend-challenge-04811e8151e6.herokuapp.com/api/v1/products?page=1&rows=8&sortBy=id&orderBy=DESC"

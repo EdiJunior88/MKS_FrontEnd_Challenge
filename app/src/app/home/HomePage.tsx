@@ -22,6 +22,7 @@ import {
   Price,
   Description,
   ButtonCard,
+  ErrorText,
 } from "@/app/home/HomePageStyles";
 import Footer from "@/app/components/Footer/Footer";
 import { RiShoppingBag3Line } from "react-icons/ri";
@@ -33,11 +34,12 @@ const montserrat = Montserrat({
 export default function HomePage() {
   const [cartItems, setCartItems] = useState<InterfaceApi[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   // Função para adicionar itens ao carrinho
   const addToCart = (item: InterfaceApi) => {
     const existingItemIndex = cartItems.findIndex(
-      (cartItem) => cartItem.id === item.id,
+      (cartItem) => cartItem.id === item.id
     );
 
     if (existingItemIndex !== -1) {
@@ -80,10 +82,16 @@ export default function HomePage() {
     data: products,
     error,
     isLoading,
-  } = useQuery("productsData", apiProducts);
+  } = useQuery("productsData", apiProducts, {
+    onError: () => {
+      setErrorMessage(
+        "⚠️ Aconteceu um erro inesperado. Por favor, atualize a página e tente novamente."
+      );
+    },
+  });
 
   // Verifique se ocorreu algum erro
-  if (error) return <div>Aconteceu um erro, tente novamente mais tarde!</div>;
+  if (error) return <ErrorText>{errorMessage}</ErrorText>;
 
   return (
     <Container className={montserrat.className}>
