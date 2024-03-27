@@ -39,7 +39,7 @@ export default function HomePage() {
   // Função para adicionar itens ao carrinho
   const addToCart = (item: InterfaceApi) => {
     const existingItemIndex = cartItems.findIndex(
-      (cartItem) => cartItem.id === item.id
+      (cartItem) => cartItem.id === item.id,
     );
 
     if (existingItemIndex !== -1) {
@@ -85,7 +85,7 @@ export default function HomePage() {
   } = useQuery("productsData", apiProducts, {
     onError: () => {
       setErrorMessage(
-        "⚠️ Aconteceu um erro inesperado. Por favor, atualize a página e tente novamente."
+        "⚠️ Aconteceu um erro inesperado. Por favor, atualize a página e tente novamente.",
       );
     },
   });
