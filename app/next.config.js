@@ -5,7 +5,16 @@ module.exports = nextConfig;
 
 module.exports = {
   images: {
-    domains: ["mks-sistemas.nyc3.digitaloceanspaces.com", "i.ibb.co"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "mks-sistemas.nyc3.digitaloceanspaces.com",
+      },
+      {
+        protocol: "https",
+        hostname: "i.ibb.co",
+      },
+    ],
   },
   compiler: {
     styledComponents: true,
