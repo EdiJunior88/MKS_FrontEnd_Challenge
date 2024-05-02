@@ -3,16 +3,16 @@
 ## Tech Stack
 EdiJunior88/MKS_FrontEnd_Challenge is built on the following main stack:
 
-- [Node.js](http://nodejs.org/) – Frameworks (Full Stack)
-- [React](https://reactjs.org/) – Javascript UI Libraries
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - [TypeScript](http://www.typescriptlang.org) – Languages
 - [Autoprefixer](https://github.com/postcss/autoprefixer) – CSS Pre-processors / Extensions
-- [ESLint](http://eslint.org/) – Code Review
-- [PostCSS](https://github.com/postcss/postcss) – CSS Pre-processors / Extensions
-- [axios](https://github.com/mzabriskie/axios) – Javascript Utilities & Libraries
 - [Next.js](https://nextjs.org/) – Frameworks (Full Stack)
+- [Node.js](http://nodejs.org/) – Frameworks (Full Stack)
+- [PostCSS](https://github.com/postcss/postcss) – CSS Pre-processors / Extensions
+- [React](https://reactjs.org/) – Javascript UI Libraries
 - [styled-components](https://styled-components.com) – JavaScript Framework Components
+- [ESLint](http://eslint.org/) – Code Review
+- [axios](https://github.com/mzabriskie/axios) – Javascript Utilities & Libraries
 
 Full tech stack [here](/techstack.md)
 
@@ -22,16 +22,16 @@ Full tech stack [here](/techstack.md)
 ## Tech Stack
 EdiJunior88/MKS_FrontEnd_Challenge is built on the following main stack:
 
-- <img width='25' height='25' src='https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png' alt='Node.js'/> [Node.js](http://nodejs.org/) – Frameworks (Full Stack)
-- <img width='25' height='25' src='https://img.stackshare.io/service/1020/OYIaJ1KK.png' alt='React'/> [React](https://reactjs.org/) – Javascript UI Libraries
 - <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/1612/bynNY5dJ.jpg' alt='TypeScript'/> [TypeScript](http://www.typescriptlang.org) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/2202/72d087642cfce6fef6f2dabec5bf49e8_400x400.png' alt='Autoprefixer'/> [Autoprefixer](https://github.com/postcss/autoprefixer) – CSS Pre-processors / Extensions
-- <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](http://eslint.org/) – Code Review
-- <img width='25' height='25' src='https://img.stackshare.io/service/3339/rlFcjEdI.png' alt='PostCSS'/> [PostCSS](https://github.com/postcss/postcss) – CSS Pre-processors / Extensions
-- <img width='25' height='25' src='https://img.stackshare.io/no-img-open-source.png' alt='axios'/> [axios](https://github.com/mzabriskie/axios) – Javascript Utilities & Libraries
 - <img width='25' height='25' src='https://img.stackshare.io/service/5936/nextjs.png' alt='Next.js'/> [Next.js](https://nextjs.org/) – Frameworks (Full Stack)
+- <img width='25' height='25' src='https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png' alt='Node.js'/> [Node.js](http://nodejs.org/) – Frameworks (Full Stack)
+- <img width='25' height='25' src='https://img.stackshare.io/service/3339/rlFcjEdI.png' alt='PostCSS'/> [PostCSS](https://github.com/postcss/postcss) – CSS Pre-processors / Extensions
+- <img width='25' height='25' src='https://img.stackshare.io/service/1020/OYIaJ1KK.png' alt='React'/> [React](https://reactjs.org/) – Javascript UI Libraries
 - <img width='25' height='25' src='https://img.stackshare.io/service/6749/styled-components.png' alt='styled-components'/> [styled-components](https://styled-components.com) – JavaScript Framework Components
+- <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](http://eslint.org/) – Code Review
+- <img width='25' height='25' src='https://img.stackshare.io/no-img-open-source.png' alt='axios'/> [axios](https://github.com/mzabriskie/axios) – Javascript Utilities & Libraries
 
 Full tech stack [here](/techstack.md)
 
@@ -43,7 +43,7 @@ Full tech stack [here](/techstack.md)
 
 ![](https://img.stackshare.io/repo.svg "repo") [EdiJunior88/MKS_FrontEnd_Challenge](https://github.com/EdiJunior88/MKS_FrontEnd_Challenge)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|19<br/>Tools used|02/04/24 <br/>Report generated|
+|19<br/>Tools used|05/02/24 <br/>Report generated|
 |------|------|
 
 </div>
@@ -94,7 +94,7 @@ Full tech stack [here](/techstack.md)
   <br>
   <sub><a href="https://nextjs.org/">Next.js</a></sub>
   <br>
-  <sub>v14.1.0</sub>
+  <sub>v14.2.3</sub>
 </td>
 
 <td align='center'>
@@ -170,7 +170,7 @@ Full tech stack [here](/techstack.md)
   <br>
   <sub><a href="https://github.com/mzabriskie/axios">axios</a></sub>
   <br>
-  <sub>v1.6.7</sub>
+  <sub>v1.6.8</sub>
 </td>
 
 </tr>
@@ -180,14 +180,14 @@ Full tech stack [here](/techstack.md)
 
 ## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (6)
 
-| NAME                                                           | VERSION   | LAST UPDATED | LAST UPDATED BY | LICENSE | VULNERABILITIES |
-| :------------------------------------------------------------- | :-------- | :----------- | :-------------- | :------ | :-------------- |
-| [@types/node](https://www.npmjs.com/@types/node)               | v20.11.10 | 11/12/23     | Edivaldo Junior | MIT     | N/A             |
-| [@types/react](https://www.npmjs.com/@types/react)             | v18.2.48  | 01/23/24     | EdiJunior88     | MIT     | N/A             |
-| [@types/react-dom](https://www.npmjs.com/@types/react-dom)     | v18.2.18  | 01/23/24     | EdiJunior88     | MIT     | N/A             |
-| [eslint-config-next](https://www.npmjs.com/eslint-config-next) | v14.1.0   | 01/21/24     | renovate[bot]   | N/A     | N/A             |
-| [react-dom](https://www.npmjs.com/react-dom)                   | v18.2.0   | 01/23/24     | EdiJunior88     | MIT     | N/A             |
-| [react-icons](https://www.npmjs.com/react-icons)               | v5.0.1    | 01/23/24     | EdiJunior88     | MIT     | N/A             |
+| NAME                                                           | VERSION  | LAST UPDATED | LAST UPDATED BY | LICENSE | VULNERABILITIES |
+| :------------------------------------------------------------- | :------- | :----------- | :-------------- | :------ | :-------------- |
+| [@types/node](https://www.npmjs.com/@types/node)               | v20.12.7 | 11/12/23     | Edivaldo Junior | MIT     | N/A             |
+| [@types/react](https://www.npmjs.com/@types/react)             | v18.2.79 | 04/15/24     | dependabot[bot] | MIT     | N/A             |
+| [@types/react-dom](https://www.npmjs.com/@types/react-dom)     | v18.2.25 | 04/15/24     | dependabot[bot] | MIT     | N/A             |
+| [eslint-config-next](https://www.npmjs.com/eslint-config-next) | v14.2.3  | 04/24/24     | dependabot[bot] | N/A     | N/A             |
+| [react-dom](https://www.npmjs.com/react-dom)                   | v18.2.0  | 04/15/24     | dependabot[bot] | MIT     | N/A             |
+| [react-icons](https://www.npmjs.com/react-icons)               | v5.1.0   | 04/15/24     | dependabot[bot] | MIT     | N/A             |
 
 <br/>
 <div align='center'>
